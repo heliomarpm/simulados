@@ -1,0 +1,206 @@
+:root {
+    --color-white-ice: #faf9f9;
+    --status-color-pendente: var(--ion-color-secondary);
+    --status-color-aprovado: var(--ion-color-tertiary);
+    --status-color-enviado: var(--ion-color-warning);
+    --status-color-finalizado: var(--ion-color-success);
+    --status-color-cancelado: var(--ion-color-danger);
+
+    --ion-color-green-light: #76ec90;
+    --ion-color-green-light-rgb: 120, 194, 136;
+    --ion-color-green-light-contrast: #fff;
+    --ion-color-green-light-contrast-rgb: 255, 255, 255;
+    --ion-color-green-light-shade: #6aab78;
+    --ion-color-green-light-tint: #92e7a5;
+
+    .ion-color-green-light {
+        --ion-color-base: var(--ion-color-green-light);
+        --ion-color-base-rgb: var(--ion-color-green-light-rgb);
+        --ion-color-contrast: var(--ion-color-green-light-contrast);
+        --ion-color-contrast-rgb: var(--ion-color-green-light-contrast-rgb);
+        --ion-color-shade: var(--ion-color-green-light-shade);
+        --ion-color-tint: var(--ion-color-green-light-tint);
+    }
+
+    ion-content {
+        // --offset-bottom: auto !important;
+        // --overflow: hidden;
+        // overflow: auto;
+        ::-webkit-scrollbar,
+        *::-webkit-scrollbar,
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    ion-content {
+        --background: var(--ion-background-color, var(--color-white-ice));
+    }
+
+    ion-content.item-backgroud {
+        --background: var(--ion-item-background, var(--ion-background-color, var(--color-white-ice)));
+    }
+
+    ion-header {
+        --border: 0;
+        
+        ion-toolbar {            
+            --background: var(--ion-color-primary);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5), 0px 4px 0px var(--ion-color-secondary);
+            ion-title {     
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 1.1em;
+            }
+        }
+        
+        ion-back-button,
+        ion-menu-button,
+        ion-title {
+            --color: var(--ion-color-secondary) !important;
+            // text-shadow: 0.1em 0.1em 0.2em var(--ion-color-dark)
+        }
+    }
+
+    ion-list-header,
+    ion-card-header {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    ion-list-header.sub-header {
+        font-size: 13px !important;
+    }
+
+    ion-card {
+        border-radius: 12px;
+    }
+
+    ion-card-title {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    ion-spinner {
+        display: block;
+        margin: auto;
+    }
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-content-center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+small,
+.small {
+    font-size: 13px !important;
+}
+
+.x-small {
+    font-size: smaller !important;
+}
+
+.xx-small {
+    font-size: x-small !important;
+}
+
+.item-note {
+    color: var(--ion-color-medium);
+}
+
+.item-input-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0;
+    -moz-box-flex: 1;
+    -moz-flex: 1 0;
+    -ms-flex: 1 0;
+    flex: 1 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 5px 8px 5px 8px;
+    background: var(--ion-color-light, var(--ion-background-color, #eee));
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0.025mm !important;
+    margin: 3px 3px 3px 3px;
+    background: var(--ion-color, #c9cbcf);
+    --ripple-color: currentColor;
+}
+
+ul.columns {
+    width: 100%;
+    overflow: hidden;
+    list-style: none; 
+    list-style-type: none;
+
+    li {
+        display: inline;
+        white-space: nowrap;
+        width: 100%;
+        float: left;
+    }
+}
+
+/* 2 col */
+#double li {
+    width: 50%;
+}
+
+/* 3 col */
+#triple li {
+    width: 33.333%;
+}
+
+/* 4 col */
+#quad li {
+    width: 25%;
+}
+
+/* 6 col */
+#six li {
+    width: 16.666%;
+}

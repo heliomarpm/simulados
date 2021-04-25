@@ -1,0 +1,47 @@
+
+<ion-split-pane contentId="main-content">
+   <ion-menu side="start" contentId="main-content" type="push" lines="none">
+      <ion-content>
+         <div class="bg-header-menu"></div>
+         <div class="content-header-menu">
+           
+            <!-- CASO O CARA TENHA CADASTRADO -->
+            <img src="../../assets/avatar.jpg" />
+            <ion-label>
+               <h1>Heliomar Marques</h1>
+               <h2>heliomarpm@gmail.com</h2>
+            </ion-label>
+       
+         </div>
+
+         <ion-list id="pages-list" inset="false" lines="inset">
+            <ion-menu-toggle auto-hide="false">
+               <ion-item lines="none" detail="false"
+                         *ngFor="let p of pages;" 
+                         [routerLink]="p.url" routerDirection="root" [class.active-menu]="selectedUrl === p.url"> 
+                  <ion-icon slot="start" [name]="p.icon + '-outline'"></ion-icon>
+                  <ion-label>{{ p.title }}</ion-label>
+               </ion-item>     
+            </ion-menu-toggle> 
+         </ion-list>
+
+         <ion-item lines="none" [routerLink]="['/logout']" menuClose>
+            <!-- <ion-item lines="none" (click)="onLogout()" menuClose> -->
+            <ion-icon slot="start" name="exit-outline"></ion-icon>                  
+            <ion-label>Desconectar</ion-label>
+         </ion-item>
+         
+      </ion-content>
+
+      <ion-footer *ngIf="toggleThemeAvailable">
+            <ion-item lines="none">
+               <ion-label>Ativar tema escuro</ion-label>
+               <ion-toggle id="toogleDarkMode" (ionChange)="onThemeChanged($event)" slot="end" [checked]="darkTheme"
+                  color="app"></ion-toggle>
+            </ion-item>
+      </ion-footer>
+      
+   </ion-menu>
+
+   <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>

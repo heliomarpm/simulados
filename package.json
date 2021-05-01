@@ -1,8 +1,8 @@
 {
-  "name": "Simulados",
+  "name": "simulados-ti",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Heliomar Marques",
+  "homepage": "https://simulados-ti.vercel.app/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
